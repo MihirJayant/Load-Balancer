@@ -56,7 +56,8 @@ mvn javafx:run
 3. Data gets decrypted
 4. Safely transferred to your machine
 
-## Project Structure ├── src/main/java/com/mycompany/
+## Project Structure 
+├── src/main/java/com/mycompany/
 
 │   ├── loadbalancer/          # Core balancing & transfer logic
 
@@ -78,7 +79,9 @@ mvn javafx:run
 
 ├── pom.xml
 
-└── README.md   ## Tech Stack
+└── README.md   
+
+## Tech Stack
 - **UI:** JavaFX
 - **Build:** Maven
 - **Database:** SQLite / MySQL
