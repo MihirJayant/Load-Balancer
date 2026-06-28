@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane style="-fx-background-color: linear-gradient(to bottom, #0C0F1A, #161B30);" xmlns="http://javafx.com/javafx/22.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxapplication1.FileManagementController">
+    
+    <!-- Main UI Container -->
+    <VBox alignment="CENTER" layoutX="1.0" layoutY="1.0" prefHeight="500.0" prefWidth="650.0" spacing="20" style="-fx-background-color: rgba(20, 25, 40, 0.95); -fx-background-radius: 15;                   -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0, 200, 255, 0.2), 10, 0, 0, 6);                   -fx-border-color: #00C8FF; -fx-border-width: 1.5px; -fx-border-radius: 15;">
+        
+        <!-- Title -->
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #00C8FF;" text="File Management System" />
+        
+        <!-- File Selection & Actions -->
+        <ListView fx:id="selectedFilesListView" prefHeight="133.0" prefWidth="350" style="-fx-background-color: rgba(15, 20, 35, 0.9); -fx-border-color: #00C8FF;                           -fx-border-radius: 10; -fx-text-fill: white; -fx-font-size: 12px;" />
+        
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="selectFileBtn" onAction="#handleSelectFile" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: black;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Select" />
+            
+            <Button fx:id="uploadFileBtn" onAction="#handleUploadFile" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: black;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Upload" />
+        </HBox>
+        
+        <!-- File Operations -->
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="deleteFileBtn" onAction="#handleDeleteFile" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #A93226; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Delete File" />
+            
+            <Button fx:id="downloadFileBtn" onAction="#handleDownloadFile" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Download" />
+            
+            <Button fx:id="shareFileBtn" onAction="#handleShareFile" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Share" />
+        </HBox>
+        
+        <!-- Additional Operations -->
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="checkHealthBtn" onAction="#handleCheckHealth" prefHeight="40.0" prefWidth="114.0" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Health" />
+            
+            <Button fx:id="viewSharedFilesBtn" onAction="#handleViewSharedFiles" prefHeight="40.0" prefWidth="149.0" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="View Shared" />
+            
+            <Button fx:id="editFileBtn" disable="true" onAction="#handleEditFile" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Edit" />
+            
+            <Button fx:id="createFileBtn" onAction="#handleCreateFile" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Create" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="backBtn" onAction="#handleBack" style="-fx-background-color: #A93226; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Back to Dashboard" />
+            <Button fx:id="openTerminalBtn" onAction="#handleOpenTerminal" style="-fx-background-color: #16A085; -fx-text-fill: black;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Open Terminal" />
+            
+            <Button fx:id="startProcessingBtn" onAction="#handleStartProcessing" style="-fx-background-color: #00C8FF; -fx-text-fill: black; -fx-text-fill: white;                             -fx-font-size: 14px; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-padding: 10 30;" text="Start" />
+        </HBox>
+        
+        <!-- Processing & Navigation -->
+        <HBox alignment="CENTER" spacing="20" />
+        
+    </VBox>
+</AnchorPane>

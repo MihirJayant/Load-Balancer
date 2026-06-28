@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/22.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.loadbalancer.TerminalController" prefWidth="800" prefHeight="600">
+    
+    <VBox alignment="CENTER" layoutX="50.0" layoutY="30.0" prefWidth="700" spacing="15" style="-fx-background-color: #252526; -fx-background-radius: 12; -fx-padding: 20;">
+        
+        <TextField fx:id="commandInput" promptText="Enter command..." style="-fx-background-color: #333; -fx-text-fill: #C0C0C0; -fx-font-family: 'monospace'; -fx-padding: 10; -fx-border-color: #555; -fx-border-radius: 5;"/>
+        
+        <Button fx:id="runCommandBtn" onAction="#handleRunCommand" text="Run Command" style="-fx-background-color: #444; -fx-text-fill: #E0E0E0; -fx-font-size: 14px; -fx-background-radius: 5; -fx-padding: 8 20; -fx-border-color: #666;"/>
+        
+        <TextArea fx:id="commandOutput" prefWidth="700" prefHeight="500" wrapText="true" editable="false" style="-fx-background-color: #1E1E1E; -fx-text-fill: #C0C0C0; -fx-font-family: 'monospace'; -fx-padding: 10; -fx-border-color: #333; -fx-border-radius: 5;"/>
+    </VBox>
+    
+</AnchorPane>

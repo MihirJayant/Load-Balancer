@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane style="-fx-background-color: linear-gradient(to bottom, #0C0F1A, #161B30);" 
+             xmlns="http://javafx.com/javafx/22.0.2" 
+             xmlns:fx="http://javafx.com/fxml/1" 
+             fx:controller="com.mycompany.javafxapplication1.SharedFilesController">
+    
+    <!-- Main UI Container -->
+    <VBox alignment="CENTER" layoutX="1.0" layoutY="1.0" prefHeight="500.0" prefWidth="650.0" spacing="20"
+          style="-fx-background-color: rgba(20, 25, 40, 0.95); -fx-background-radius: 15; 
+                 -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0, 200, 255, 0.2), 10, 0, 0, 6); 
+                 -fx-border-color: #00C8FF; -fx-border-width: 1.5px; -fx-border-radius: 15;">
+        
+        <!-- Title -->
+        <Label text="Shared Files" 
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #00C8FF;" />
+        
+        <!-- Shared Files List -->
+        <ListView fx:id="sharedFilesListView" prefHeight="200" prefWidth="500"
+                  style="-fx-background-color: rgba(15, 20, 35, 0.9); -fx-border-color: #00C8FF; 
+                         -fx-border-radius: 10; -fx-text-fill: white; -fx-font-size: 12px;" />
+        
+        <!-- Open Shared File Button -->
+        <Button fx:id="editSharedFileBtn" text="Open File" onAction="#handleOpenSharedFile"
+                style="-fx-background-color: #00C8FF; -fx-text-fill: black; 
+                       -fx-font-size: 14px; -fx-font-weight: bold;
+                       -fx-background-radius: 10; -fx-padding: 10 30;"/>
+        
+        <!-- Back Button -->
+        <Button fx:id="backToFileManagementBtn" text="Back" onAction="#handleBack"
+                style="-fx-background-color: #A93226; -fx-text-fill: white; 
+                       -fx-font-size: 14px; -fx-font-weight: bold;
+                       -fx-background-radius: 10; -fx-padding: 10 30;"/>
+    
+    </VBox>
+</AnchorPane>

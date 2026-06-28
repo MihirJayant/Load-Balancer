@@ -1,0 +1,21 @@
+# Build output
+target/
+build/
+dependency-reduced-pom.xml
+# Logs
+*.log
+*.log.*
+*.lck
+# Local data / databases
+*.db
+*.sqbpro
+storage/
+# IDE / editor
+nbproject/private/
+nbactions.xml
+.idea/
+*.iml
+.vscode/
+# OS cruft
+.DS_Store
+Thumbs.db
